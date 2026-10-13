@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<style>*,*::before,*::after{box-sizing:border-box}:root{color-scheme:dark;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0;font-size:14px}img,video{max-width:100%}[hidden]{display:none!important}</style>
+<title>Campus Link · Rhema Motion</title>
+<meta name="description" content="Rhema is a motion designer in Nigeria making short animated ads for apps, food spots, gyms and brand launches. Built for WhatsApp status, Instagram and TikTok.">
+<meta property="og:title" content="Campus Link launch ad · Rhema Motion">
+<meta property="og:description" content="Short animated ads for apps, food spots, gyms and launches. See the BRYT Pay and Campus Link ads.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="preview.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230B6B4C'/%3E%3Cpolygon points='12,9 24,16 12,23' fill='white'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700&family=Figtree:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap">
+<style>
+/* Layout: editing-timeline feel — timecode labels; home lists projects as cards, each project gets its own page */
+:root{
+  --bg:#0D1311; --surface:#151D1A; --ink:#ECF1EE; --muted:#9AA7A0; --line:#26312C;
+  --accent:#34C08D; --accent-ink:#06120D; --mark:#F2B53A; color-scheme:dark;
+  --display:"Unbounded",system-ui,sans-serif;
+  --body:"Figtree",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --mono:"JetBrains Mono",ui-monospace,Menlo,monospace;
+}
+
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.55}
+.wrap{max-width:1040px;margin:0 auto;padding-inline:20px;padding-block:28px 56px;display:flex;flex-direction:column;gap:64px}
+h1,h2,h3{font-family:var(--display);text-wrap:balance;margin:0;line-height:1.1}
+p{margin:0}
+.tc{font-family:var(--mono);font-size:12px;letter-spacing:.06em;color:var(--muted);text-transform:uppercase;font-variant-numeric:tabular-nums}
+
+header{display:flex;flex-direction:column;gap:20px}
+.top{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.brand{font-family:var(--display);font-weight:700;font-size:15px;letter-spacing:.04em}
+.brand span{color:var(--accent)}
+.rec{display:inline-flex;align-items:center;gap:8px}
+.rec i{width:8px;height:8px;border-radius:50%;background:var(--mark);display:block}
+@media (prefers-reduced-motion:no-preference){.rec i{animation:blink 1.4s steps(2,start) infinite}}
+@keyframes blink{to{visibility:hidden}}
+h1{font-size:clamp(30px,6.4vw,58px);font-weight:700;max-width:16ch}
+h1 em{font-style:normal;color:var(--accent)}
+.lede{color:var(--muted);font-size:18px;max-width:52ch}
+
+/* reel */
+.reel{display:grid;grid-template-columns:minmax(0,300px) minmax(0,1fr);gap:28px;align-items:start}
+@media (max-width:760px){.reel{grid-template-columns:1fr}}
+.frame{background:var(--ink);border-radius:14px;overflow:hidden;max-width:100%}
+.frame video{display:block;width:100%;height:auto;background:#000}
+.vert{max-width:300px}
+@media (max-width:760px){.vert{max-width:340px;margin-inline:auto;width:100%}}
+.info{display:flex;flex-direction:column;gap:18px;min-width:0}
+.info h2{font-size:clamp(22px,3.4vw,30px)}
+.info p{color:var(--muted);max-width:56ch}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{font-family:var(--mono);font-size:12px;padding:6px 10px;border:1px solid var(--line);border-radius:999px;color:var(--ink)}
+.cap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;padding-top:10px}
+
+/* timeline strip between videos */
+.strip{display:grid;grid-template-columns:repeat(6,1fr);border-top:1px solid var(--line)}
+.strip div{border-left:1px solid var(--line);padding:8px 0 0 6px}
+.strip div:first-child{border-left:0;padding-left:0}
+
+section > .head{display:flex;align-items:baseline;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:24px}
+section h2{font-size:clamp(22px,3.6vw,32px)}
+
+.services{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));border-top:1px solid var(--line)}
+@media (max-width:640px){.services{grid-template-columns:1fr}}
+.svc{padding:22px 0;border-bottom:1px solid var(--line);display:flex;flex-direction:column;gap:6px;min-width:0}
+.services .svc:nth-child(odd){padding-right:24px}
+@media (min-width:641px){.services .svc:nth-child(even){padding-left:24px;border-left:1px solid var(--line)}}
+.svc h3{font-size:17px;font-weight:500}
+.svc p{color:var(--muted)}
+
+.steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+@media (max-width:700px){.steps{grid-template-columns:1fr}}
+.step{display:flex;flex-direction:column;gap:8px;min-width:0}
+.step .tc{color:var(--accent)}
+.step h3{font-size:17px;font-weight:500}
+.step p{color:var(--muted)}
+
+.cta{background:var(--accent);color:var(--accent-ink);border-radius:18px;padding:36px 28px;display:flex;flex-direction:column;gap:14px}
+.cta h2{font-size:clamp(24px,4.4vw,38px)}
+.cta p{max-width:52ch;opacity:.9;font-size:17px}
+.btns{display:flex;flex-wrap:wrap;gap:12px;margin-top:6px}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:14px 22px;border-radius:999px;font-weight:600;text-decoration:none;background:var(--accent-ink);color:var(--accent);border:2px solid var(--accent-ink)}
+.btn.ghost{background:transparent;color:var(--accent-ink)}
+.btn:focus-visible,.ct button:focus-visible{outline:3px solid var(--mark);outline-offset:2px}
+.contacts{display:flex;flex-direction:column;gap:10px;margin-top:8px;border-top:1px solid color-mix(in srgb,var(--accent-ink) 30%,transparent);padding-top:16px}
+.ct{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.ct .tc{color:inherit;opacity:.8;min-width:120px}
+.ct b{font-weight:600;font-size:17px;user-select:all;min-width:0;overflow-wrap:anywhere}
+.ct button{font:inherit;font-size:13px;padding:4px 12px;border-radius:999px;border:1px solid var(--accent-ink);background:transparent;color:var(--accent-ink);cursor:pointer}
+footer{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+
+/* project cards */
+.cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+@media (max-width:520px){.cards{gap:12px}}
+.card{display:flex;flex-direction:column;gap:12px;text-decoration:none;color:inherit;min-width:0}
+.thumb{position:relative;border-radius:14px;overflow:hidden;background:var(--ink);aspect-ratio:4/5;max-width:100%}
+.thumb img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s ease}
+@media (prefers-reduced-motion:no-preference){.card:hover .thumb img{transform:scale(1.03)}}
+.play{position:absolute;left:12px;bottom:12px;display:inline-flex;align-items:center;gap:6px;background:var(--surface);color:var(--ink);border-radius:999px;padding:6px 12px 6px 8px;font-family:var(--mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase}
+.play svg{width:16px;height:16px;fill:var(--accent)}
+.card h3{font-size:clamp(16px,2.6vw,22px);font-weight:500}
+.card p{color:var(--muted);font-size:15px}
+.card .go{color:var(--accent);font-weight:600;font-size:15px}
+.card:focus-visible{outline:3px solid var(--mark);outline-offset:4px;border-radius:14px}
+/* project page */
+.back{color:var(--accent);text-decoration:none;font-weight:600}
+.back:focus-visible,.next:focus-visible{outline:3px solid var(--mark);outline-offset:3px}
+.phead{display:flex;flex-direction:column;gap:16px;max-width:62ch}
+.phead h1{max-width:none}
+.phead p{color:var(--muted);font-size:17px}
+.cut{display:flex;flex-direction:column;gap:14px}
+.cut .lab{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;border-top:1px solid var(--line);padding-top:12px}
+.cut .lab b{font-family:var(--display);font-weight:500;font-size:18px}
+.cut .vert{margin-inline:0}
+@media (max-width:760px){.cut .vert{margin-inline:auto}}
+.next{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:20px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);text-decoration:none;color:inherit}
+.next b{font-family:var(--display);font-weight:500;font-size:clamp(18px,3vw,24px)}
+.next span:last-child{color:var(--accent);font-size:24px}
+.mini{display:flex;flex-direction:column;gap:14px;background:var(--accent);color:var(--accent-ink);border-radius:18px;padding:28px 24px}
+.mini h2{font-size:clamp(20px,3.6vw,28px)}
+
+/* project cards */
+.cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+@media (max-width:520px){.cards{gap:12px}}
+.card{display:flex;flex-direction:column;gap:12px;text-decoration:none;color:inherit;min-width:0}
+.thumb{position:relative;border-radius:14px;overflow:hidden;background:var(--ink);aspect-ratio:4/5;max-width:100%}
+.thumb img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s ease}
+@media (prefers-reduced-motion:no-preference){.card:hover .thumb img{transform:scale(1.03)}}
+.play{position:absolute;left:12px;bottom:12px;display:inline-flex;align-items:center;gap:6px;background:var(--surface);color:var(--ink);border-radius:999px;padding:6px 12px 6px 8px;font-family:var(--mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase}
+.play svg{width:16px;height:16px;fill:var(--accent)}
+.card h3{font-size:clamp(16px,2.6vw,22px);font-weight:500}
+.card p{color:var(--muted);font-size:15px}
+.card .go{color:var(--accent);font-weight:600;font-size:15px}
+.card:focus-visible{outline:3px solid var(--mark);outline-offset:4px;border-radius:14px}
+/* project page */
+.back{color:var(--accent);text-decoration:none;font-weight:600}
+.back:focus-visible,.next:focus-visible{outline:3px solid var(--mark);outline-offset:3px}
+.phead{display:flex;flex-direction:column;gap:16px;max-width:62ch}
+.phead h1{max-width:none}
+.phead p{color:var(--muted);font-size:17px}
+.cut{display:flex;flex-direction:column;gap:14px}
+.cut .lab{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;border-top:1px solid var(--line);padding-top:12px}
+.cut .lab b{font-family:var(--display);font-weight:500;font-size:18px}
+.cut .vert{margin-inline:0}
+@media (max-width:760px){.cut .vert{margin-inline:auto}}
+.next{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:20px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);text-decoration:none;color:inherit}
+.next b{font-family:var(--display);font-weight:500;font-size:clamp(18px,3vw,24px)}
+.next span:last-child{color:var(--accent);font-size:24px}
+.mini{display:flex;flex-direction:column;gap:14px;background:var(--accent);color:var(--accent-ink);border-radius:18px;padding:28px 24px}
+.mini h2{font-size:clamp(20px,3.6vw,28px)}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="top">
+      <a class="brand" href="index.html" style="color:inherit;text-decoration:none">RHEMA<span>.</span>MOTION</a>
+      <div class="tc rec"><i></i>Motion ads · Nigeria</div>
+    </div>
+    <a class="back" href="index.html">← All work</a>
+  </header>
+
+  <section class="phead" aria-labelledby="t">
+    <span class="tc">Client project · Launch ad</span>
+    <h1 id="t">Campus Link launch ad</h1>
+    <p>A 40-second launch ad for Campus Link, a marketplace built for Nigerian university students. Bold type sells the promise, "Buy. Sell. Connect.", while floating tags show what students trade: laptops, textbooks, kicks, hostel essentials and services.</p>
+    <div class="chips"><span class="chip">9:16 + 16:9</span><span class="chip">Launch campaign</span><span class="chip">With sound</span></div>
+    
+  </section>
+
+  <section class="cut" aria-label="Vertical cut">
+    <div class="lab"><b>Vertical</b><span class="tc">9:16 · WhatsApp status, Instagram Reels, TikTok</span></div>
+    <div class="frame vert"><video src="campuslink-v916-720p.mp4" poster="poster-cl-v.jpg" controls playsinline preload="metadata" aria-label="Campus Link vertical ad"></video></div>
+  </section>
+
+  <section class="cut" aria-label="Widescreen cut">
+    <div class="lab"><b>Widescreen</b><span class="tc">16:9 · Website, YouTube, X</span></div>
+    <div class="frame"><video src="campuslink-720p.mp4" poster="poster-cl-w.jpg" controls playsinline preload="metadata" aria-label="Campus Link widescreen ad"></video></div>
+  </section>
+
+  <a class="next" href="bryt-pay.html"><span><span class="tc">Next project</span><br><b>BRYT Pay</b></span><span aria-hidden="true">→</span></a>
+
+  <section class="mini" aria-labelledby="go">
+    <h2 id="go">Want an ad like this?</h2>
+    <div class="btns">
+      <a class="btn" href="https://wa.me/2349133615232?text=Hi%20Rhema%2C%20I%20saw%20your%20motion%20ads%20portfolio" target="_blank" rel="noopener">Chat on WhatsApp</a>
+      <a class="btn ghost" href="mailto:rhemaadoga@gmail.com?subject=Motion%20ad%20for%20my%20brand">Send an email</a>
+    </div>
+    <div class="contacts">
+      <div class="ct"><span class="tc">WhatsApp / Call</span><b>0913 361 5232</b><button type="button" data-copy="09133615232">Copy</button></div>
+      <div class="ct"><span class="tc">Email</span><b>rhemaadoga@gmail.com</b><button type="button" data-copy="rhemaadoga@gmail.com">Copy</button></div>
+    </div>
+  </section>
+<script>
+document.querySelectorAll('[data-copy]').forEach(function(b){
+  b.addEventListener('click',function(){
+    var t=b.getAttribute('data-copy'),done=function(){b.textContent='Copied';setTimeout(function(){b.textContent='Copy'},1600)};
+    var sel=function(){var r=document.createRange();r.selectNodeContents(b.previousElementSibling);var s=getSelection();s.removeAllRanges();s.addRange(r);b.textContent='Selected'};
+    try{navigator.clipboard.writeText(t).then(done,sel)}catch(e){sel()}
+  });
+});
+</script>
+  <footer class="tc"><span>Rhema · Motion designer</span></footer>
+</div>
+</body>
+</html>
