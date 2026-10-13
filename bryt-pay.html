@@ -3,209 +3,185 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<style>*,*::before,*::after{box-sizing:border-box}:root{color-scheme:dark;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0;font-size:14px}img,video{max-width:100%}[hidden]{display:none!important}</style>
 <title>BRYT Pay · Rhema Motion</title>
-<meta name="description" content="Rhema is a motion designer in Nigeria making short animated ads for apps, food spots, gyms and brand launches. Built for WhatsApp status, Instagram and TikTok.">
-<meta property="og:title" content="BRYT Pay launch film · Rhema Motion">
-<meta property="og:description" content="Short animated ads for apps, food spots, gyms and launches. See the BRYT Pay and Campus Link ads.">
+<meta name="description" content="One wallet for airtime, data, bills and exam PINs, introduced in a single user journey.">
+<meta property="og:title" content="BRYT Pay · Rhema Motion">
+<meta property="og:description" content="One wallet for airtime, data, bills and exam PINs, introduced in a single user journey.">
 <meta property="og:type" content="website">
+<meta property="og:url" content="https://rhema-motion.vercel.app/bryt-pay.html">
 <meta property="og:image" content="https://rhema-motion.vercel.app/preview.jpg">
-<meta property="og:url" content="https://rhema-motion.vercel.app/">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230B6B4C'/%3E%3Cpolygon points='12,9 24,16 12,23' fill='white'/%3E%3C/svg%3E">
+<meta name="theme-color" content="#0B0F0E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%2334C08D'/%3E%3Cpolygon points='12,9 24,16 12,23' fill='%2306120D'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700&family=Figtree:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;600;800&family=Figtree:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap">
 <style>
-/* Layout: editing-timeline feel — timecode labels; home lists projects as cards, each project gets its own page */
+/* Layout: dark screening-room studio site. Edge-to-edge reel, index of work with hover-play, case-study pages. Timecode/mono labels as the motion vernacular. */
 :root{
-  --bg:#0D1311; --surface:#151D1A; --ink:#ECF1EE; --muted:#9AA7A0; --line:#26312C;
-  --accent:#34C08D; --accent-ink:#06120D; --mark:#F2B53A; color-scheme:dark;
+  --bg:#0B0F0E; --surface:#131917; --raise:#1A2220; --ink:#EEF2EF; --muted:#94A39C; --line:#232D2A;
+  --accent:#34C08D; --accent-ink:#06120D; --rec:#F2B53A;
   --display:"Unbounded",system-ui,sans-serif;
   --body:"Figtree",system-ui,-apple-system,"Segoe UI",sans-serif;
   --mono:"JetBrains Mono",ui-monospace,Menlo,monospace;
+  color-scheme:dark;
 }
-
-body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.55}
-.wrap{max-width:1040px;margin:0 auto;padding-inline:20px;padding-block:28px 56px;display:flex;flex-direction:column;gap:64px}
-h1,h2,h3{font-family:var(--display);text-wrap:balance;margin:0;line-height:1.1}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.55;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+img,video{max-width:100%;display:block}
+a{color:inherit}
+h1,h2,h3{font-family:var(--display);margin:0;line-height:1.05;text-wrap:balance;letter-spacing:-.02em}
 p{margin:0}
-.tc{font-family:var(--mono);font-size:12px;letter-spacing:.06em;color:var(--muted);text-transform:uppercase;font-variant-numeric:tabular-nums}
+.wrap{max-width:1180px;margin:0 auto;padding-inline:20px}
+.tc{font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-variant-numeric:tabular-nums}
+:focus-visible{outline:3px solid var(--rec);outline-offset:3px;border-radius:6px}
 
-header{display:flex;flex-direction:column;gap:20px}
-.top{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
-.brand{font-family:var(--display);font-weight:700;font-size:15px;letter-spacing:.04em}
+/* nav */
+.nav{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 82%,transparent);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:14px}
+.brand{font-family:var(--display);font-weight:800;font-size:15px;letter-spacing:.06em;text-decoration:none}
 .brand span{color:var(--accent)}
-.rec{display:inline-flex;align-items:center;gap:8px}
-.rec i{width:8px;height:8px;border-radius:50%;background:var(--mark);display:block}
+.nav ul{display:flex;gap:22px;list-style:none;margin:0;padding:0;font-size:15px}
+.nav ul a{text-decoration:none;color:var(--muted)}
+.nav ul a:hover{color:var(--ink)}
+.nav .cta-s{color:var(--accent)!important;font-weight:600}
+@media (max-width:560px){.nav ul li.h{display:none}}
+
+/* hero */
+.hero{padding-block:clamp(40px,8vw,96px) 28px;display:grid;gap:26px}
+.rec{display:inline-flex;align-items:center;gap:10px}
+.rec i{width:9px;height:9px;border-radius:50%;background:var(--rec)}
 @media (prefers-reduced-motion:no-preference){.rec i{animation:blink 1.4s steps(2,start) infinite}}
 @keyframes blink{to{visibility:hidden}}
-h1{font-size:clamp(30px,6.4vw,58px);font-weight:700;max-width:16ch}
-h1 em{font-style:normal;color:var(--accent)}
-.lede{color:var(--muted);font-size:18px;max-width:52ch}
+.hero h1{font-size:clamp(38px,8.4vw,108px);font-weight:800}
+.hero h1 em{font-style:normal;color:var(--accent)}
+.hero .lede{font-size:clamp(17px,2vw,20px);color:var(--muted);max-width:56ch}
+.reel{position:relative;border-radius:18px;overflow:hidden;border:1px solid var(--line);background:#000;aspect-ratio:16/9}
+.reel video{width:100%;height:100%;object-fit:cover}
+.reel .over{position:absolute;inset:auto 0 0 0;display:flex;justify-content:space-between;align-items:flex-end;gap:12px;padding:18px;background:linear-gradient(transparent,rgba(0,0,0,.65))}
+.reel .over .tc{color:#fff}
+.play-btn{display:inline-flex;align-items:center;gap:10px;background:var(--ink);color:var(--bg);border:0;border-radius:999px;padding:12px 20px 12px 14px;font:600 15px var(--body);cursor:pointer}
+.play-btn svg{width:18px;height:18px;fill:currentColor}
+.reel.full .over{display:none}
+@media (max-width:560px){.reel .over{padding:10px}.reel .over .tc{display:none}.play-btn{padding:8px 14px 8px 10px;font-size:13px}.play-btn svg{width:14px;height:14px}}
 
-/* reel */
-.reel{display:grid;grid-template-columns:minmax(0,300px) minmax(0,1fr);gap:28px;align-items:start}
-@media (max-width:760px){.reel{grid-template-columns:1fr}}
-.frame{background:var(--ink);border-radius:14px;overflow:hidden;max-width:100%}
-.frame video{display:block;width:100%;height:auto;background:#000}
-.vert{max-width:300px}
-@media (max-width:760px){.vert{max-width:340px;margin-inline:auto;width:100%}}
-.info{display:flex;flex-direction:column;gap:18px;min-width:0}
-.info h2{font-size:clamp(22px,3.4vw,30px)}
-.info p{color:var(--muted);max-width:56ch}
-.chips{display:flex;flex-wrap:wrap;gap:8px}
-.chip{font-family:var(--mono);font-size:12px;padding:6px 10px;border:1px solid var(--line);border-radius:999px;color:var(--ink)}
-.cap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;padding-top:10px}
+/* section heads */
+.sec{padding-block:clamp(56px,9vw,110px) 0}
+.sh{display:flex;align-items:baseline;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-bottom:28px;border-bottom:1px solid var(--line);padding-bottom:14px}
+.sh h2{font-size:clamp(24px,4vw,40px);font-weight:600}
 
-/* timeline strip between videos */
-.strip{display:grid;grid-template-columns:repeat(6,1fr);border-top:1px solid var(--line)}
-.strip div{border-left:1px solid var(--line);padding:8px 0 0 6px}
-.strip div:first-child{border-left:0;padding-left:0}
+/* work index */
+.work{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
+@media (max-width:900px){.work{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:560px){.work{grid-template-columns:1fr}}
+.card{display:flex;flex-direction:column;gap:14px;text-decoration:none;min-width:0}
+.thumb{position:relative;aspect-ratio:4/5;border-radius:16px;overflow:hidden;background:var(--surface);border:1px solid var(--line);max-width:100%}
+.thumb img,.thumb video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.thumb video{opacity:0;transition:opacity .3s}
+.card.playing .thumb video{opacity:1}
+@media (prefers-reduced-motion:no-preference){.thumb img{transition:transform .5s ease}.card:hover .thumb img{transform:scale(1.03)}}
+.badge{position:absolute;left:12px;top:12px;background:rgba(0,0,0,.55);color:#fff;border-radius:999px;padding:6px 11px;font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase}
+.card h3{font-size:clamp(18px,2.2vw,22px);font-weight:600}
+.card p{color:var(--muted);font-size:15px}
+.meta{display:flex;justify-content:space-between;gap:10px}
 
-section > .head{display:flex;align-items:baseline;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:24px}
-section h2{font-size:clamp(22px,3.6vw,32px)}
+/* capabilities */
+.caps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:1px solid var(--line)}
+@media (max-width:900px){.caps{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:560px){.caps{grid-template-columns:1fr}}
+.cap{padding:26px 22px 26px 0;border-bottom:1px solid var(--line);display:flex;flex-direction:column;gap:8px;min-width:0}
+.cap h3{font-size:18px;font-weight:600}
+.cap p{color:var(--muted);font-size:15px}
 
-.services{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));border-top:1px solid var(--line)}
-@media (max-width:640px){.services{grid-template-columns:1fr}}
-.svc{padding:22px 0;border-bottom:1px solid var(--line);display:flex;flex-direction:column;gap:6px;min-width:0}
-.services .svc:nth-child(odd){padding-right:24px}
-@media (min-width:641px){.services .svc:nth-child(even){padding-left:24px;border-left:1px solid var(--line)}}
-.svc h3{font-size:17px;font-weight:500}
-.svc p{color:var(--muted)}
-
-.steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
-@media (max-width:700px){.steps{grid-template-columns:1fr}}
-.step{display:flex;flex-direction:column;gap:8px;min-width:0}
+/* process */
+.steps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}
+@media (max-width:900px){.steps{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:560px){.steps{grid-template-columns:1fr}}
+.step{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:22px;display:flex;flex-direction:column;gap:10px;min-width:0}
 .step .tc{color:var(--accent)}
-.step h3{font-size:17px;font-weight:500}
-.step p{color:var(--muted)}
+.step h3{font-size:17px;font-weight:600}
+.step p{color:var(--muted);font-size:15px}
 
-.cta{background:var(--accent);color:var(--accent-ink);border-radius:18px;padding:36px 28px;display:flex;flex-direction:column;gap:14px}
-.cta h2{font-size:clamp(24px,4.4vw,38px)}
-.cta p{max-width:52ch;opacity:.9;font-size:17px}
-.btns{display:flex;flex-wrap:wrap;gap:12px;margin-top:6px}
+/* contact */
+.contact{margin-block:clamp(56px,9vw,110px);background:var(--accent);color:var(--accent-ink);border-radius:24px;padding:clamp(28px,5vw,56px);display:flex;flex-direction:column;gap:18px}
+.contact h2{font-size:clamp(30px,6vw,64px);font-weight:800}
+.contact p{max-width:52ch;font-size:17px}
+.btns{display:flex;flex-wrap:wrap;gap:12px}
 .btn{display:inline-flex;align-items:center;justify-content:center;padding:14px 22px;border-radius:999px;font-weight:600;text-decoration:none;background:var(--accent-ink);color:var(--accent);border:2px solid var(--accent-ink)}
 .btn.ghost{background:transparent;color:var(--accent-ink)}
-.btn:focus-visible,.ct button:focus-visible{outline:3px solid var(--mark);outline-offset:2px}
-.contacts{display:flex;flex-direction:column;gap:10px;margin-top:8px;border-top:1px solid color-mix(in srgb,var(--accent-ink) 30%,transparent);padding-top:16px}
-.ct{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
-.ct .tc{color:inherit;opacity:.8;min-width:120px}
-.ct b{font-weight:600;font-size:17px;user-select:all;min-width:0;overflow-wrap:anywhere}
+.ct{display:flex;align-items:center;gap:12px;flex-wrap:wrap;border-top:1px solid color-mix(in srgb,var(--accent-ink) 25%,transparent);padding-top:14px}
+.ct .tc{color:inherit;opacity:.75;min-width:118px}
+.ct b{font-size:17px;user-select:all;overflow-wrap:anywhere}
 .ct button{font:inherit;font-size:13px;padding:4px 12px;border-radius:999px;border:1px solid var(--accent-ink);background:transparent;color:var(--accent-ink);cursor:pointer}
-footer{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+footer{border-top:1px solid var(--line)}
+footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;padding-block:22px}
 
-/* project cards */
-.cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
-@media (max-width:520px){.cards{gap:12px}}
-.card{display:flex;flex-direction:column;gap:12px;text-decoration:none;color:inherit;min-width:0}
-.thumb{position:relative;border-radius:14px;overflow:hidden;background:var(--ink);aspect-ratio:4/5;max-width:100%}
-.thumb img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s ease}
-@media (prefers-reduced-motion:no-preference){.card:hover .thumb img{transform:scale(1.03)}}
-.play{position:absolute;left:12px;bottom:12px;display:inline-flex;align-items:center;gap:6px;background:var(--surface);color:var(--ink);border-radius:999px;padding:6px 12px 6px 8px;font-family:var(--mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase}
-.play svg{width:16px;height:16px;fill:var(--accent)}
-.card h3{font-size:clamp(16px,2.6vw,22px);font-weight:500}
-.card p{color:var(--muted);font-size:15px}
-.card .go{color:var(--accent);font-weight:600;font-size:15px}
-.card:focus-visible{outline:3px solid var(--mark);outline-offset:4px;border-radius:14px}
-/* project page */
-.back{color:var(--accent);text-decoration:none;font-weight:600}
-.back:focus-visible,.next:focus-visible{outline:3px solid var(--mark);outline-offset:3px}
-.phead{display:flex;flex-direction:column;gap:16px;max-width:62ch}
-.phead h1{max-width:none}
-.phead p{color:var(--muted);font-size:17px}
-.cut{display:flex;flex-direction:column;gap:14px}
-.cut .lab{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;border-top:1px solid var(--line);padding-top:12px}
-.cut .lab b{font-family:var(--display);font-weight:500;font-size:18px}
-.cut .vert{margin-inline:0}
-@media (max-width:760px){.cut .vert{margin-inline:auto}}
-.next{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:20px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);text-decoration:none;color:inherit}
-.next b{font-family:var(--display);font-weight:500;font-size:clamp(18px,3vw,24px)}
-.next span:last-child{color:var(--accent);font-size:24px}
-.mini{display:flex;flex-direction:column;gap:14px;background:var(--accent);color:var(--accent-ink);border-radius:18px;padding:28px 24px}
-.mini h2{font-size:clamp(20px,3.6vw,28px)}
-
-/* project cards */
-.cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
-@media (max-width:520px){.cards{gap:12px}}
-.card{display:flex;flex-direction:column;gap:12px;text-decoration:none;color:inherit;min-width:0}
-.thumb{position:relative;border-radius:14px;overflow:hidden;background:var(--ink);aspect-ratio:4/5;max-width:100%}
-.thumb img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s ease}
-@media (prefers-reduced-motion:no-preference){.card:hover .thumb img{transform:scale(1.03)}}
-.play{position:absolute;left:12px;bottom:12px;display:inline-flex;align-items:center;gap:6px;background:var(--surface);color:var(--ink);border-radius:999px;padding:6px 12px 6px 8px;font-family:var(--mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase}
-.play svg{width:16px;height:16px;fill:var(--accent)}
-.card h3{font-size:clamp(16px,2.6vw,22px);font-weight:500}
-.card p{color:var(--muted);font-size:15px}
-.card .go{color:var(--accent);font-weight:600;font-size:15px}
-.card:focus-visible{outline:3px solid var(--mark);outline-offset:4px;border-radius:14px}
-/* project page */
-.back{color:var(--accent);text-decoration:none;font-weight:600}
-.back:focus-visible,.next:focus-visible{outline:3px solid var(--mark);outline-offset:3px}
-.phead{display:flex;flex-direction:column;gap:16px;max-width:62ch}
-.phead h1{max-width:none}
-.phead p{color:var(--muted);font-size:17px}
-.cut{display:flex;flex-direction:column;gap:14px}
-.cut .lab{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;border-top:1px solid var(--line);padding-top:12px}
-.cut .lab b{font-family:var(--display);font-weight:500;font-size:18px}
-.cut .vert{margin-inline:0}
-@media (max-width:760px){.cut .vert{margin-inline:auto}}
-.next{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:20px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);text-decoration:none;color:inherit}
-.next b{font-family:var(--display);font-weight:500;font-size:clamp(18px,3vw,24px)}
-.next span:last-child{color:var(--accent);font-size:24px}
-.mini{display:flex;flex-direction:column;gap:14px;background:var(--accent);color:var(--accent-ink);border-radius:18px;padding:28px 24px}
-.mini h2{font-size:clamp(20px,3.6vw,28px)}
+/* case study */
+.case-head{padding-block:clamp(36px,7vw,80px) 28px;display:grid;gap:20px}
+.case-head h1{font-size:clamp(32px,6.6vw,80px);font-weight:800}
+.case-head .lede{font-size:clamp(17px,2vw,20px);color:var(--muted);max-width:60ch}
+.facts{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0;border-block:1px solid var(--line)}
+@media (max-width:700px){.facts{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.fact{padding:16px 16px 16px 0;display:flex;flex-direction:column;gap:6px;min-width:0}
+.fact b{font-weight:500}
+.film{margin-top:32px;border-radius:18px;overflow:hidden;border:1px solid var(--line);background:#000}
+.film video{width:100%;aspect-ratio:16/9}
+.split{display:grid;grid-template-columns:minmax(0,340px) minmax(0,1fr);gap:clamp(24px,5vw,64px);align-items:start;margin-top:clamp(40px,7vw,80px)}
+@media (max-width:760px){.split{grid-template-columns:1fr}}
+.vert{border-radius:18px;overflow:hidden;border:1px solid var(--line);background:#000;max-width:340px;width:100%}
+@media (max-width:760px){.vert{margin-inline:auto}}
+.vert video{width:100%;aspect-ratio:9/16}
+.story{display:flex;flex-direction:column;gap:28px;min-width:0}
+.story section{display:flex;flex-direction:column;gap:8px}
+.story h2{font-size:clamp(20px,2.6vw,26px);font-weight:600}
+.story p{color:var(--muted);max-width:60ch}
+.craft{display:flex;flex-wrap:wrap;gap:8px}
+.chip{font-family:var(--mono);font-size:12px;padding:7px 11px;border:1px solid var(--line);border-radius:999px;color:var(--ink)}
+.next{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-top:clamp(48px,8vw,96px);padding-block:26px;border-block:1px solid var(--line);text-decoration:none}
+.next b{font-family:var(--display);font-weight:600;font-size:clamp(22px,4vw,40px);display:block;margin-top:6px}
+.next .arr{font-size:clamp(28px,5vw,48px);color:var(--accent)}
 </style>
 </head>
 <body>
-<div class="wrap">
-  <header>
-    <div class="top">
-      <a class="brand" href="index.html" style="color:inherit;text-decoration:none">RHEMA<span>.</span>MOTION</a>
-      <div class="tc rec"><i></i>Motion ads · Nigeria</div>
-    </div>
-    <a class="back" href="index.html">← All work</a>
-  </header>
-
-  <section class="phead" aria-labelledby="t">
-    <span class="tc">Client project · App explainer</span>
-    <h1 id="t">BRYT Pay launch film</h1>
-    <p>A 30-second launch ad for BRYT Pay, a Nigerian app for data, airtime and bill payments. It walks a new user from sign-up to wallet funding to instant checkout, with phone and laptop mockups, an animated logo reveal and an amapiano-style score made for the ad.</p>
-    <div class="chips"><span class="chip">60 fps</span><span class="chip">9:16 + 16:9</span><span class="chip">Original music &amp; SFX</span></div>
-    <div class="strip tc" aria-hidden="true"><div>Hook</div><div>Logo</div><div>App</div><div>Steps</div><div>Proof</div><div>CTA</div></div>
-  </section>
-
-  <section class="cut" aria-label="Vertical cut">
-    <div class="lab"><b>Vertical</b><span class="tc">9:16 · WhatsApp status, Instagram Reels, TikTok</span></div>
-    <div class="frame vert"><video src="v916-720p.mp4" poster="poster-bp-v.jpg" controls playsinline preload="metadata" aria-label="BRYT Pay vertical ad"></video></div>
-  </section>
-
-  <section class="cut" aria-label="Widescreen cut">
-    <div class="lab"><b>Widescreen</b><span class="tc">16:9 · YouTube, website, presentations</span></div>
-    <div class="frame"><video src="brytpay-720p.mp4" poster="poster-bp-w.jpg" controls playsinline preload="metadata" aria-label="BRYT Pay widescreen ad"></video></div>
-  </section>
-
-  <a class="next" href="campus-link.html"><span><span class="tc">Next project</span><br><b>Campus Link</b></span><span aria-hidden="true">→</span></a>
-
-  <section class="mini" aria-labelledby="go">
-    <h2 id="go">Want an ad like this?</h2>
-    <div class="btns">
-      <a class="btn" href="https://wa.me/2349133615232?text=Hi%20Rhema%2C%20I%20saw%20your%20motion%20ads%20portfolio" target="_blank" rel="noopener">Chat on WhatsApp</a>
-      <a class="btn ghost" href="mailto:rhemaadoga@gmail.com?subject=Motion%20ad%20for%20my%20brand">Send an email</a>
-    </div>
-    <div class="contacts">
-      <div class="ct"><span class="tc">WhatsApp / Call</span><b>0913 361 5232</b><button type="button" data-copy="09133615232">Copy</button></div>
-      <div class="ct"><span class="tc">Email</span><b>rhemaadoga@gmail.com</b><button type="button" data-copy="rhemaadoga@gmail.com">Copy</button></div>
+<header class="nav"><div class="wrap">
+  <a class="brand" href="index.html">RHEMA<span>.</span>MOTION</a>
+  <ul><li class="h"><a href="index.html#work">Work</a></li><li class="h"><a href="index.html#services">Services</a></li><li><a class="cta-s" href="index.html#contact">Start a project</a></li></ul>
+</div></header>
+<main class="wrap">
+  <section class="case-head" aria-labelledby="t">
+    <a class="tc" href="index.html#work" style="text-decoration:none">← All work</a>
+    <h1 id="t">BRYT Pay Launch Film</h1>
+    <p class="lede">One wallet for airtime, data, bills and exam PINs, introduced in a single user journey.</p>
+    <div class="facts">
+      <div class="fact"><span class="tc">Client</span><b>BRYT Pay</b></div>
+      <div class="fact"><span class="tc">Sector</span><b>Fintech · Nigeria</b></div>
+      <div class="fact"><span class="tc">Type</span><b>Launch film</b></div>
+      <div class="fact"><span class="tc">Year</span><b>2026</b></div>
     </div>
   </section>
+  <div class="film"><video src="brytpay-720p.mp4" poster="poster-bp-w.jpg" controls playsinline preload="metadata" aria-label="BRYT Pay Launch Film, widescreen"></video></div>
+  <div class="split">
+    <div class="vert"><video src="v916-720p.mp4" poster="poster-bp-v.jpg" controls playsinline preload="metadata" aria-label="BRYT Pay Launch Film, vertical"></video></div>
+    <div class="story">
+      <section><span class="tc">The brief</span><p>BRYT Pay was launching an everyday payments app and needed one film that explains the whole product fast: what it does, how it works, and why it is simpler than juggling five apps.</p></section>
+      <section><span class="tc">The approach</span><p>I told it as one user&#x27;s journey. A hook that flips through the services, a logo reveal, then the real flow on screen: sign up, fund the wallet, buy data, done. Phone and laptop interfaces were rebuilt from BRYT&#x27;s own colours and type so every frame feels like the product.</p></section>
+      <section><span class="tc">Craft</span><div class="craft"><span class="chip">UI animation</span><span class="chip">Logo reveal</span><span class="chip">Kinetic type</span><span class="chip">Original score</span><span class="chip">Sound design</span><span class="chip">16:9 + 9:16</span></div></section>
+      <section><span class="tc">Delivered</span><p>Landscape for web and YouTube, vertical for Reels, TikTok and WhatsApp status, plus separate music and SFX stems.</p></section>
+    </div>
+  </div>
+  <a class="next" href="bryt-pay-nin.html"><span><span class="tc">Next project</span><b>BRYT Pay · NIN Slip</b></span><span class="arr" aria-hidden="true">→</span></a>
+  <section class="contact" id="contact" aria-labelledby="ct">
+  <h2 id="ct">Let's make something move.</h2>
+  <p>Launch films, product animations and ads for your next campaign. Tell me what you're working on and I'll come back with an idea.</p>
+  <div class="btns"><a class="btn" href="https://wa.me/2349133615232?text=Hi%20Rhema%2C%20I%20saw%20your%20motion%20work" target="_blank" rel="noopener">Chat on WhatsApp</a><a class="btn ghost" href="mailto:rhemaadoga@gmail.com?subject=Motion%20design%20project">Send an email</a></div>
+  <div class="ct"><span class="tc">WhatsApp / Call</span><b>0913 361 5232</b><button type="button" data-copy="09133615232">Copy</button></div>
+  <div class="ct"><span class="tc">Email</span><b>rhemaadoga@gmail.com</b><button type="button" data-copy="rhemaadoga@gmail.com">Copy</button></div>
+</section>
+</main>
+<footer><div class="wrap tc"><span>Rhema · Motion designer</span><span>© 2026</span></div></footer>
 <script>
-document.querySelectorAll('[data-copy]').forEach(function(b){
-  b.addEventListener('click',function(){
-    var t=b.getAttribute('data-copy'),done=function(){b.textContent='Copied';setTimeout(function(){b.textContent='Copy'},1600)};
-    var sel=function(){var r=document.createRange();r.selectNodeContents(b.previousElementSibling);var s=getSelection();s.removeAllRanges();s.addRange(r);b.textContent='Selected'};
-    try{navigator.clipboard.writeText(t).then(done,sel)}catch(e){sel()}
-  });
-});
+document.querySelectorAll('[data-copy]').forEach(function(b){b.addEventListener('click',function(){var t=b.getAttribute('data-copy');var done=function(){b.textContent='Copied';setTimeout(function(){b.textContent='Copy'},1600)};var sel=function(){var r=document.createRange();r.selectNodeContents(b.previousElementSibling);var s=getSelection();s.removeAllRanges();s.addRange(r);b.textContent='Selected'};try{navigator.clipboard.writeText(t).then(done,sel)}catch(e){sel()}})});
 </script>
-  <footer class="tc"><span>Rhema · Motion designer</span></footer>
-</div>
 </body>
 </html>
