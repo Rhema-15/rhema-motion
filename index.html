@@ -72,8 +72,8 @@ p{margin:0}
 .sh h2{font-size:clamp(24px,4vw,40px);font-weight:600}
 
 /* work index */
-.work{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
-@media (max-width:900px){.work{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.work{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px}
+@media (max-width:1100px){.work{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media (max-width:560px){.work{grid-template-columns:1fr}}
 .card{display:flex;flex-direction:column;gap:14px;text-decoration:none;min-width:0}
 .thumb{position:relative;aspect-ratio:4/5;border-radius:16px;overflow:hidden;background:var(--surface);border:1px solid var(--line);max-width:100%}
@@ -129,6 +129,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;
 .film video{width:100%;aspect-ratio:16/9}
 .split{display:grid;grid-template-columns:minmax(0,340px) minmax(0,1fr);gap:clamp(24px,5vw,64px);align-items:start;margin-top:clamp(40px,7vw,80px)}
 @media (max-width:760px){.split{grid-template-columns:1fr}}
+.split.solo{grid-template-columns:minmax(0,1fr)}
 .vert{border-radius:18px;overflow:hidden;border:1px solid var(--line);background:#000;max-width:340px;width:100%}
 @media (max-width:760px){.vert{margin-inline:auto}}
 .vert video{width:100%;aspect-ratio:9/16}
@@ -179,6 +180,12 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;
       <div class="meta"><span class="tc">Campus Link</span><span class="tc">Student marketplace</span></div>
       <h3>Campus Link Launch</h3>
       <p>Buy. Sell. Connect. A campus marketplace launched with bold kinetic type.</p>
+    </a>
+    <a class="card" href="fut-homes.html">
+      <div class="thumb"><img src="thumb-fh.jpg" alt="Frame from the FUT Homes · Real Rooms" loading="lazy"><video muted loop playsinline preload="none" data-src="futhomes-720p.mp4" aria-hidden="true"></video><span class="badge">Product launch film</span></div>
+      <div class="meta"><span class="tc">FUT Homes</span><span class="tc">Student housing · Minna</span></div>
+      <h3>FUT Homes · Real Rooms</h3>
+      <p>Real rooms, real videos: a housing platform for FUTMINNA students, launched in 30 seconds.</p>
     </a>
     </div>
   </section>
