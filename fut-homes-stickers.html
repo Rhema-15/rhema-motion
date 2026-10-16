@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>FUT Homes · Sticker Ads · Rhema Motion</title>
+<meta name="description" content="Two launch ads in the new FUT Homes sticker look: same product, louder personality.">
+<meta property="og:title" content="FUT Homes · Sticker Ads · Rhema Motion">
+<meta property="og:description" content="Two launch ads in the new FUT Homes sticker look: same product, louder personality.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://rhema-motion.vercel.app/fut-homes-stickers.html">
+<meta property="og:image" content="https://rhema-motion.vercel.app/preview.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0B0F0E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%2334C08D'/%3E%3Cpolygon points='12,9 24,16 12,23' fill='%2306120D'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;600;800&family=Figtree:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap">
+<style>
+/* Layout: dark screening-room studio site. Edge-to-edge reel, index of work with hover-play, case-study pages. Timecode/mono labels as the motion vernacular. */
+:root{
+  --bg:#0B0F0E; --surface:#131917; --raise:#1A2220; --ink:#EEF2EF; --muted:#94A39C; --line:#232D2A;
+  --accent:#34C08D; --accent-ink:#06120D; --rec:#F2B53A;
+  --display:"Unbounded",system-ui,sans-serif;
+  --body:"Figtree",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --mono:"JetBrains Mono",ui-monospace,Menlo,monospace;
+  color-scheme:dark;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.55;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+img,video{max-width:100%;display:block}
+a{color:inherit}
+h1,h2,h3{font-family:var(--display);margin:0;line-height:1.05;text-wrap:balance;letter-spacing:-.02em}
+p{margin:0}
+.wrap{max-width:1180px;margin:0 auto;padding-inline:20px}
+.tc{font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-variant-numeric:tabular-nums}
+:focus-visible{outline:3px solid var(--rec);outline-offset:3px;border-radius:6px}
+
+/* nav */
+.nav{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 82%,transparent);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:14px}
+.brand{font-family:var(--display);font-weight:800;font-size:15px;letter-spacing:.06em;text-decoration:none}
+.brand span{color:var(--accent)}
+.nav ul{display:flex;gap:22px;list-style:none;margin:0;padding:0;font-size:15px}
+.nav ul a{text-decoration:none;color:var(--muted)}
+.nav ul a:hover{color:var(--ink)}
+.nav .cta-s{color:var(--accent)!important;font-weight:600}
+@media (max-width:560px){.nav ul li.h{display:none}}
+
+/* hero */
+.hero{padding-block:clamp(40px,8vw,96px) 28px;display:grid;gap:26px}
+.rec{display:inline-flex;align-items:center;gap:10px}
+.rec i{width:9px;height:9px;border-radius:50%;background:var(--rec)}
+@media (prefers-reduced-motion:no-preference){.rec i{animation:blink 1.4s steps(2,start) infinite}}
+@keyframes blink{to{visibility:hidden}}
+.hero h1{font-size:clamp(38px,8.4vw,108px);font-weight:800}
+.hero h1 em{font-style:normal;color:var(--accent)}
+.hero .lede{font-size:clamp(17px,2vw,20px);color:var(--muted);max-width:56ch}
+.reel{position:relative;border-radius:18px;overflow:hidden;border:1px solid var(--line);background:#000;aspect-ratio:16/9}
+.reel video{width:100%;height:100%;object-fit:cover}
+.reel .over{position:absolute;inset:auto 0 0 0;display:flex;justify-content:space-between;align-items:flex-end;gap:12px;padding:18px;background:linear-gradient(transparent,rgba(0,0,0,.65))}
+.reel .over .tc{color:#fff}
+.play-btn{display:inline-flex;align-items:center;gap:10px;background:var(--ink);color:var(--bg);border:0;border-radius:999px;padding:12px 20px 12px 14px;font:600 15px var(--body);cursor:pointer}
+.play-btn svg{width:18px;height:18px;fill:currentColor}
+.reel.full .over{display:none}
+@media (max-width:560px){.reel .over{padding:10px}.reel .over .tc{display:none}.play-btn{padding:8px 14px 8px 10px;font-size:13px}.play-btn svg{width:14px;height:14px}}
+
+/* section heads */
+.sec{padding-block:clamp(56px,9vw,110px) 0}
+.sh{display:flex;align-items:baseline;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-bottom:28px;border-bottom:1px solid var(--line);padding-bottom:14px}
+.sh h2{font-size:clamp(24px,4vw,40px);font-weight:600}
+
+/* work index */
+.work{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px}
+@media (max-width:1100px){.work{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:560px){.work{grid-template-columns:1fr}}
+.card{display:flex;flex-direction:column;gap:14px;text-decoration:none;min-width:0}
+.thumb{position:relative;aspect-ratio:4/5;border-radius:16px;overflow:hidden;background:var(--surface);border:1px solid var(--line);max-width:100%}
+.thumb img,.thumb video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.thumb video{opacity:0;transition:opacity .3s}
+.card.playing .thumb video{opacity:1}
+@media (prefers-reduced-motion:no-preference){.thumb img{transition:transform .5s ease}.card:hover .thumb img{transform:scale(1.03)}}
+.badge{position:absolute;left:12px;top:12px;background:rgba(0,0,0,.55);color:#fff;border-radius:999px;padding:6px 11px;font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase}
+.card h3{font-size:clamp(18px,2.2vw,22px);font-weight:600}
+.card p{color:var(--muted);font-size:15px}
+.meta{display:flex;justify-content:space-between;gap:10px}
+
+/* capabilities */
+.caps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:1px solid var(--line)}
+@media (max-width:900px){.caps{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:560px){.caps{grid-template-columns:1fr}}
+.cap{padding:26px 22px 26px 0;border-bottom:1px solid var(--line);display:flex;flex-direction:column;gap:8px;min-width:0}
+.cap h3{font-size:18px;font-weight:600}
+.cap p{color:var(--muted);font-size:15px}
+
+/* process */
+.steps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}
+@media (max-width:900px){.steps{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:560px){.steps{grid-template-columns:1fr}}
+.step{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:22px;display:flex;flex-direction:column;gap:10px;min-width:0}
+.step .tc{color:var(--accent)}
+.step h3{font-size:17px;font-weight:600}
+.step p{color:var(--muted);font-size:15px}
+
+/* contact */
+.contact{margin-block:clamp(56px,9vw,110px);background:var(--accent);color:var(--accent-ink);border-radius:24px;padding:clamp(28px,5vw,56px);display:flex;flex-direction:column;gap:18px}
+.contact h2{font-size:clamp(30px,6vw,64px);font-weight:800}
+.contact p{max-width:52ch;font-size:17px}
+.btns{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:14px 22px;border-radius:999px;font-weight:600;text-decoration:none;background:var(--accent-ink);color:var(--accent);border:2px solid var(--accent-ink)}
+.btn.ghost{background:transparent;color:var(--accent-ink)}
+.ct{display:flex;align-items:center;gap:12px;flex-wrap:wrap;border-top:1px solid color-mix(in srgb,var(--accent-ink) 25%,transparent);padding-top:14px}
+.ct .tc{color:inherit;opacity:.75;min-width:118px}
+.ct b{font-size:17px;user-select:all;overflow-wrap:anywhere}
+.ct button{font:inherit;font-size:13px;padding:4px 12px;border-radius:999px;border:1px solid var(--accent-ink);background:transparent;color:var(--accent-ink);cursor:pointer}
+footer{border-top:1px solid var(--line)}
+footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;padding-block:22px}
+
+/* case study */
+.case-head{padding-block:clamp(36px,7vw,80px) 28px;display:grid;gap:20px}
+.case-head h1{font-size:clamp(32px,6.6vw,80px);font-weight:800}
+.case-head .lede{font-size:clamp(17px,2vw,20px);color:var(--muted);max-width:60ch}
+.facts{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0;border-block:1px solid var(--line)}
+@media (max-width:700px){.facts{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.fact{padding:16px 16px 16px 0;display:flex;flex-direction:column;gap:6px;min-width:0}
+.fact b{font-weight:500}
+.film{margin-top:32px;border-radius:18px;overflow:hidden;border:1px solid var(--line);background:#000}
+.film video{width:100%;aspect-ratio:16/9}
+.split{display:grid;grid-template-columns:minmax(0,340px) minmax(0,1fr);gap:clamp(24px,5vw,64px);align-items:start;margin-top:clamp(40px,7vw,80px)}
+@media (max-width:760px){.split{grid-template-columns:1fr}}
+.split.solo{grid-template-columns:minmax(0,1fr)}
+.vert{border-radius:18px;overflow:hidden;border:1px solid var(--line);background:#000;max-width:340px;width:100%}
+@media (max-width:760px){.vert{margin-inline:auto}}
+.vert video{width:100%;aspect-ratio:9/16}
+.story{display:flex;flex-direction:column;gap:28px;min-width:0}
+.story section{display:flex;flex-direction:column;gap:8px}
+.story h2{font-size:clamp(20px,2.6vw,26px);font-weight:600}
+.story p{color:var(--muted);max-width:60ch}
+.craft{display:flex;flex-wrap:wrap;gap:8px}
+.chip{font-family:var(--mono);font-size:12px;padding:7px 11px;border:1px solid var(--line);border-radius:999px;color:var(--ink)}
+.next{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-top:clamp(48px,8vw,96px);padding-block:26px;border-block:1px solid var(--line);text-decoration:none}
+.next b{font-family:var(--display);font-weight:600;font-size:clamp(22px,4vw,40px);display:block;margin-top:6px}
+.next .arr{font-size:clamp(28px,5vw,48px);color:var(--accent)}
+</style>
+</head>
+<body>
+<header class="nav"><div class="wrap">
+  <a class="brand" href="index.html">RHEMA<span>.</span>MOTION</a>
+  <ul><li class="h"><a href="index.html#work">Work</a></li><li class="h"><a href="index.html#services">Services</a></li><li><a class="cta-s" href="index.html#contact">Start a project</a></li></ul>
+</div></header>
+<main class="wrap">
+  <section class="case-head" aria-labelledby="t">
+    <a class="tc" href="index.html#work" style="text-decoration:none">← All work</a>
+    <h1 id="t">FUT Homes · Sticker Ads</h1>
+    <p class="lede">Two launch ads in the new FUT Homes sticker look: same product, louder personality.</p>
+    <div class="facts">
+      <div class="fact"><span class="tc">Client</span><b>FUT Homes</b></div>
+      <div class="fact"><span class="tc">Sector</span><b>Student housing · Minna</b></div>
+      <div class="fact"><span class="tc">Type</span><b>Launch ads</b></div>
+      <div class="fact"><span class="tc">Year</span><b>2026</b></div>
+    </div>
+  </section>
+  <div class="film"><video src="fh-sticker-a-720p.mp4" poster="poster-fhs-a.jpg" controls playsinline preload="metadata" aria-label="FUT Homes Sticker Ad A"></video></div>
+  <div class="split solo">
+    <div class="story">
+      <section><span class="tc">The brief</span><p>FUT Homes moved to a playful sticker identity: violet and lilac, chunky outlines, pink and yellow highlights. The launch ads had to carry that new look while still earning trust from students who've been burned by fake agents.</p></section>
+      <section><span class="tc">Ad A · Same story, new look</span><p>The Real Rooms story rebuilt in the new identity. It opens on &quot;Finding a room in Minna shouldn't feel like a gamble&quot;, shows agents' real room videos, then walks the product: search by area and budget, watch the room, check the verified-agent badge.</p></section>
+    </div>
+  </div>
+  <div class="film"><video src="fh-sticker-b-720p.mp4" poster="poster-fhs-b.jpg" controls playsinline preload="metadata" aria-label="FUT Homes Sticker Ad B"></video></div>
+  <div class="split solo">
+    <div class="story">
+      <section><span class="tc">Ad B · New, punchier script</span><p>A faster cut built around student pain points. Browse rooms by area, watch the room before you go, see the full cost with no surprise fees, and rent only from verified agents.</p></section>
+      <section><span class="tc">Craft</span><div class="craft"><span class="chip">Sticker identity</span><span class="chip">UI animation</span><span class="chip">Real footage</span><span class="chip">Kinetic type</span><span class="chip">16:9</span></div></section>
+      <section><span class="tc">Delivered</span><p>Each ad with a &quot;Coming soon&quot; and a &quot;Live now&quot; ending, in Full HD, WhatsApp and TV sizes, plus profile photos in three colourways. I also designed the FUT Homes brand and built the platform it shows.</p></section>
+    </div>
+  </div>
+  <a class="next" href="dvc-empire.html"><span><span class="tc">Next project</span><b>DVC Empire · New Drop</b></span><span class="arr" aria-hidden="true">→</span></a>
+  <section class="contact" id="contact" aria-labelledby="ct">
+  <h2 id="ct">Let's make something move.</h2>
+  <p>Launch films, product animations and ads for your next campaign. Tell me what you're working on and I'll come back with an idea.</p>
+  <div class="btns"><a class="btn" href="https://wa.me/2349133615232?text=Hi%20Rhema%2C%20I%20saw%20your%20motion%20work" target="_blank" rel="noopener">Chat on WhatsApp</a><a class="btn ghost" href="mailto:rhemaadoga@gmail.com?subject=Motion%20design%20project">Send an email</a></div>
+  <div class="ct"><span class="tc">WhatsApp / Call</span><b>0913 361 5232</b><button type="button" data-copy="09133615232">Copy</button></div>
+  <div class="ct"><span class="tc">Email</span><b>rhemaadoga@gmail.com</b><button type="button" data-copy="rhemaadoga@gmail.com">Copy</button></div>
+</section>
+</main>
+<footer><div class="wrap tc"><span>Rhema · Motion designer</span><span>© 2026</span></div></footer>
+<script>
+document.querySelectorAll('[data-copy]').forEach(function(b){b.addEventListener('click',function(){var t=b.getAttribute('data-copy');var done=function(){b.textContent='Copied';setTimeout(function(){b.textContent='Copy'},1600)};var sel=function(){var r=document.createRange();r.selectNodeContents(b.previousElementSibling);var s=getSelection();s.removeAllRanges();s.addRange(r);b.textContent='Selected'};try{navigator.clipboard.writeText(t).then(done,sel)}catch(e){sel()}})});
+</script>
+</body>
+</html>
